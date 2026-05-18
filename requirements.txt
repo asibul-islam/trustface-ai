@@ -1,4 +1,5 @@
 streamlit
+opencv-python-headless
 deepface
 tensorflow==2.16.1
 tf-keras
