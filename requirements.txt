@@ -1,5 +1,5 @@
 streamlit
-deepface
+deepface --no-deps
 tensorflow==2.16.1
 tf-keras
 opencv-python-headless
@@ -10,7 +10,7 @@ pandas
 scikit-learn
 torch
 torchvision
-grad-cam
+gradcam
 imutils
 
 -c constraints.txt
