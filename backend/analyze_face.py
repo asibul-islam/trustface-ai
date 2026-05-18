@@ -1,5 +1,5 @@
 from deepface import DeepFace
-from quality_checks import assess_image_quality
+from backend.quality_checks import assess_image_quality
 import json
 import os
 

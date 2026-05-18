@@ -5,7 +5,7 @@ import torchvision.models as models
 from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.image import show_cam_on_image
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
-from analyze_face import analyze_face
+from backend.analyze_face import analyze_face
 
 
 def generate_gradcam(img_path: str, output_path: str = "outputs/gradcam_output.png") -> str:
