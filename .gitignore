@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Outputs
+backend/outputs/*.png
+backend/outputs/*.json
+
+# DeepFace weights
+.deepface/
+
+# Large files
+*.h5
