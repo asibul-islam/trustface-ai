@@ -1,0 +1,192 @@
+[
+    {
+        "variant": "original",
+        "image_path": "outputs/perturbations/original.jpg",
+        "analysis": {
+            "estimated_age": 25,
+            "age_group": "Adult",
+            "age_verification_risk": "Standard",
+            "dominant_gender": "Man",
+            "dominant_emotion": "happy",
+            "face_confidence": 0.89,
+            "biometric_trust_score": 89.0,
+            "risk_level": "Low Risk",
+            "image_quality": {
+                "image_width": 2441,
+                "image_height": 3051,
+                "blur_score": 109.85,
+                "blur_status": "Clear",
+                "brightness": 122.65,
+                "brightness_status": "Normal"
+            },
+            "face_region": {
+                "x": 853,
+                "y": 274,
+                "w": 826,
+                "h": 826,
+                "left_eye": [
+                    1386,
+                    613
+                ],
+                "right_eye": [
+                    1099,
+                    610
+                ]
+            },
+            "trust_score_explanation": "The trust score is based on face detection confidence, with penalties for poor image quality such as blur or abnormal brightness.",
+            "research_note": "This analysis estimates facial attributes and produces a preliminary biometric trust score. It is intended for research exploration in trustworthy facial AI, not for real-world identity or age verification decisions."
+        }
+    },
+    {
+        "variant": "blurred",
+        "image_path": "outputs/perturbations/blurred.jpg",
+        "analysis": {
+            "estimated_age": 24,
+            "age_group": "Adult",
+            "age_verification_risk": "Standard",
+            "dominant_gender": "Man",
+            "dominant_emotion": "neutral",
+            "face_confidence": 0.89,
+            "biometric_trust_score": 74.0,
+            "risk_level": "Moderate Risk",
+            "image_quality": {
+                "image_width": 2441,
+                "image_height": 3051,
+                "blur_score": 1.57,
+                "blur_status": "Potentially Blurry",
+                "brightness": 122.65,
+                "brightness_status": "Normal"
+            },
+            "face_region": {
+                "x": 862,
+                "y": 281,
+                "w": 806,
+                "h": 806,
+                "left_eye": [
+                    1382,
+                    613
+                ],
+                "right_eye": [
+                    1091,
+                    610
+                ]
+            },
+            "trust_score_explanation": "The trust score is based on face detection confidence, with penalties for poor image quality such as blur or abnormal brightness.",
+            "research_note": "This analysis estimates facial attributes and produces a preliminary biometric trust score. It is intended for research exploration in trustworthy facial AI, not for real-world identity or age verification decisions."
+        }
+    },
+    {
+        "variant": "darkened",
+        "image_path": "outputs/perturbations/darkened.jpg",
+        "analysis": {
+            "estimated_age": 26,
+            "age_group": "Adult",
+            "age_verification_risk": "Standard",
+            "dominant_gender": "Man",
+            "dominant_emotion": "neutral",
+            "face_confidence": 0.89,
+            "biometric_trust_score": 74.0,
+            "risk_level": "Moderate Risk",
+            "image_quality": {
+                "image_width": 2441,
+                "image_height": 3051,
+                "blur_score": 37.52,
+                "blur_status": "Potentially Blurry",
+                "brightness": 73.58,
+                "brightness_status": "Normal"
+            },
+            "face_region": {
+                "x": 855,
+                "y": 277,
+                "w": 820,
+                "h": 820,
+                "left_eye": [
+                    1388,
+                    614
+                ],
+                "right_eye": [
+                    1098,
+                    608
+                ]
+            },
+            "trust_score_explanation": "The trust score is based on face detection confidence, with penalties for poor image quality such as blur or abnormal brightness.",
+            "research_note": "This analysis estimates facial attributes and produces a preliminary biometric trust score. It is intended for research exploration in trustworthy facial AI, not for real-world identity or age verification decisions."
+        }
+    },
+    {
+        "variant": "brightened",
+        "image_path": "outputs/perturbations/brightened.jpg",
+        "analysis": {
+            "estimated_age": 25,
+            "age_group": "Adult",
+            "age_verification_risk": "Standard",
+            "dominant_gender": "Man",
+            "dominant_emotion": "happy",
+            "face_confidence": 0.9,
+            "biometric_trust_score": 90.0,
+            "risk_level": "Low Risk",
+            "image_quality": {
+                "image_width": 2441,
+                "image_height": 3051,
+                "blur_score": 203.88,
+                "blur_status": "Clear",
+                "brightness": 187.63,
+                "brightness_status": "Normal"
+            },
+            "face_region": {
+                "x": 847,
+                "y": 270,
+                "w": 839,
+                "h": 839,
+                "left_eye": [
+                    1379,
+                    613
+                ],
+                "right_eye": [
+                    1098,
+                    607
+                ]
+            },
+            "trust_score_explanation": "The trust score is based on face detection confidence, with penalties for poor image quality such as blur or abnormal brightness.",
+            "research_note": "This analysis estimates facial attributes and produces a preliminary biometric trust score. It is intended for research exploration in trustworthy facial AI, not for real-world identity or age verification decisions."
+        }
+    },
+    {
+        "variant": "compressed",
+        "image_path": "outputs/perturbations/compressed.jpg",
+        "analysis": {
+            "estimated_age": 25,
+            "age_group": "Adult",
+            "age_verification_risk": "Standard",
+            "dominant_gender": "Man",
+            "dominant_emotion": "happy",
+            "face_confidence": 0.89,
+            "biometric_trust_score": 74.0,
+            "risk_level": "Moderate Risk",
+            "image_quality": {
+                "image_width": 2441,
+                "image_height": 3051,
+                "blur_score": 62.02,
+                "blur_status": "Potentially Blurry",
+                "brightness": 122.66,
+                "brightness_status": "Normal"
+            },
+            "face_region": {
+                "x": 852,
+                "y": 277,
+                "w": 827,
+                "h": 827,
+                "left_eye": [
+                    1384,
+                    613
+                ],
+                "right_eye": [
+                    1097,
+                    607
+                ]
+            },
+            "trust_score_explanation": "The trust score is based on face detection confidence, with penalties for poor image quality such as blur or abnormal brightness.",
+            "research_note": "This analysis estimates facial attributes and produces a preliminary biometric trust score. It is intended for research exploration in trustworthy facial AI, not for real-world identity or age verification decisions."
+        }
+    }
+]
