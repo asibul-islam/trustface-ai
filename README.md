@@ -32,6 +32,23 @@ This project is inspired by recent research on trustworthy biometric systems, fa
 - PyTorch
 - Matplotlib
 
+## Sample Report
+
+![TrustFace AI Report](backend/outputs/trustface_report.png)
+
+## Perturbation Robustness Test
+
+TrustFace AI also evaluates how image perturbations affect the biometric trust score.
+
+![Perturbation Trust Scores](backend/outputs/perturbation_trust_scores.png)
+
+Example tested perturbations:
+- Original image
+- Blurred image
+- Darkened image
+- Brightened image
+- JPEG-compressed image
+
 ## Disclaimer
 
 This system is for research and educational exploration only. It should not be used for real-world identity verification, age verification, law enforcement, or high-stakes decision making.
