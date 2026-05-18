@@ -11,10 +11,6 @@ __pycache__/
 # IDE
 .idea/
 
-# Outputs
-backend/outputs/*.png
-backend/outputs/*.json
-
 # DeepFace weights
 .deepface/
 
