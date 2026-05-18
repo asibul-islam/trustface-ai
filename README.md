@@ -1,54 +1,146 @@
 # TrustFace AI
 
-TrustFace AI is a research-inspired prototype for trustworthy facial AI analysis. It analyzes facial images and generates a preliminary biometric trust score using facial attribute estimation, face detection confidence, and image quality checks.
+TrustFace AI is a research-inspired prototype for trustworthy facial AI analysis. The system combines facial attribute estimation, image quality assessment, explainable AI, and robustness testing to explore reliability and trust in facial analytics systems.
+
+---
 
 ## Motivation
 
-Facial AI systems are increasingly used in identity verification, age estimation, and online safety applications. However, facial analytics can be affected by image quality, appearance changes, makeup, manipulation, and other real-world factors. This project explores how trust-aware analysis and interpretable outputs can support research in reliable facial AI systems.
+Facial AI systems are increasingly used in identity verification, age estimation, online safety, and biometric applications. However, facial analytics can be affected by:
+
+- image quality degradation,
+- appearance changes,
+- compression artifacts,
+- blur,
+- brightness variation,
+- adversarial manipulation,
+- and real-world environmental conditions.
+
+TrustFace AI explores how trust-aware analysis and interpretable outputs can support research in reliable and explainable facial AI systems.
+
+---
 
 ## Current Features
 
+### Facial Analysis
 - Facial age estimation
-- Minor/adult age group flag
-- Gender and emotion estimation
+- Minor/adult age group detection
+- Gender estimation
+- Emotion estimation
 - Face detection confidence
-- Image blur and brightness checks
+
+### Trust & Quality Assessment
 - Biometric trust score
 - Risk level assessment
+- Blur detection
+- Brightness analysis
+- Quality-aware trust penalties
+
+### Explainable AI
+- Grad-CAM explainability heatmaps
+- Facial attention visualization
+- Face region extraction
+- Eye landmark visualization
+
+### Robustness Evaluation
+- Perturbation testing pipeline
+- Blur robustness testing
+- Brightness robustness testing
+- JPEG compression robustness testing
+- Trust score comparison under perturbations
+
+### System Features
+- Interactive Streamlit frontend
 - JSON result export
 - Batch image analysis
-- Face bounding box and eye marker visualization
+- Automated visual report generation
 
-## Research Context
+---
 
-This project is inspired by recent research on trustworthy biometric systems, facial manipulation robustness, image forensics, and age verification. It is intended only as a research prototype, not as a real-world identity or age verification system.
+## System Architecture
+
+```text
+Image Upload
+      ↓
+Facial Attribute Analysis
+      ↓
+Image Quality Assessment
+      ↓
+Trust Score Calculation
+      ↓
+Explainability Heatmap Generation
+      ↓
+Robustness Evaluation
+      ↓
+Visual Report Generation
+```
+
+---
 
 ## Tech Stack
 
 - Python
+- Streamlit
 - DeepFace
-- OpenCV
-- FastAPI planned
 - PyTorch
+- OpenCV
+- Grad-CAM
 - Matplotlib
 
-## Sample Report
+---
+
+## Sample TrustFace AI Report
 
 ![TrustFace AI Report](backend/outputs/trustface_report.png)
 
-## Perturbation Robustness Test
+---
 
-TrustFace AI also evaluates how image perturbations affect the biometric trust score.
+## Explainability Heatmap
 
-![Perturbation Trust Scores](backend/outputs/perturbation_trust_scores.png)
+TrustFace AI uses Grad-CAM explainability visualization to highlight facial regions most influential to the model.
 
-Example tested perturbations:
+![GradCAM Output](backend/outputs/gradcam_output.png)
+
+---
+
+## Perturbation Robustness Testing
+
+TrustFace AI evaluates how image perturbations affect biometric trust estimation.
+
+Tested perturbations include:
 - Original image
 - Blurred image
 - Darkened image
 - Brightened image
 - JPEG-compressed image
 
+![Perturbation Trust Scores](backend/outputs/perturbation_trust_scores.png)
+
+---
+
+## Research Context
+
+This project is inspired by research directions in:
+
+- trustworthy biometric AI,
+- facial manipulation robustness,
+- explainable AI,
+- image forensics,
+- biometric reliability,
+- and AI safety.
+
+TrustFace AI is intended only as a research prototype and educational exploration system.
+
+---
+
 ## Disclaimer
 
-This system is for research and educational exploration only. It should not be used for real-world identity verification, age verification, law enforcement, or high-stakes decision making.
+This system is NOT intended for:
+- real-world identity verification,
+- age verification,
+- law enforcement,
+- surveillance,
+- hiring decisions,
+- or high-stakes automated decision making.
+
+The project is designed solely for research exploration and educational purposes.
