@@ -2,14 +2,13 @@ streamlit
 deepface
 tensorflow==2.16.1
 tf-keras
-torch
-torchvision
 opencv-python-headless
 pillow
 numpy
 matplotlib
-grad-cam
-timm
 pandas
 scikit-learn
+torch
+torchvision
+grad-cam
 imutils
