@@ -48,7 +48,7 @@ if uploaded_file is not None:
 
     with left:
         st.subheader("Uploaded Image")
-        st.image(image_path, use_container_width=True)
+        st.image(image_path, width="stretch")
 
     with right:
         st.subheader("Run Analysis")
@@ -84,19 +84,20 @@ if uploaded_file is not None:
             q3.metric("Brightness Status", analysis["image_quality"]["brightness_status"])
 
             with st.spinner("Generating explainability heatmap..."):
-                gradcam_path = generate_gradcam(
-                    image_path,
-                    output_path="backend/outputs/gradcam_output.png"
-                )
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as gradcam_file:
+                    gradcam_path = generate_gradcam(
+                        image_path,
+                        output_path=gradcam_file.name
+                    )
 
             st.markdown("## Explainability")
             c1, c2 = st.columns(2)
 
             with c1:
-                st.image(image_path, caption="Original Image", use_container_width=True)
+                st.image(image_path, caption="Original Image", width="stretch")
 
             with c2:
-                st.image(gradcam_path, caption="Grad-CAM Heatmap", use_container_width=True)
+                st.image(gradcam_path, caption="Grad-CAM Heatmap", width="stretch")
 
             with st.expander("View full JSON result"):
                 st.json(analysis)
