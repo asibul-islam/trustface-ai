@@ -1,3 +1,4 @@
+from PIL import Image, ImageOps
 import streamlit as st
 import tempfile
 import os
@@ -32,7 +33,15 @@ uploaded_file = st.file_uploader(
 
 if uploaded_file is not None:
     with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as temp_file:
-        temp_file.write(uploaded_file.read())
+        image = Image.open(uploaded_file)
+
+        # Fix iPhone/EXIF rotation
+        image = ImageOps.exif_transpose(image)
+
+        # Convert to RGB so it saves safely as JPG
+        image = image.convert("RGB")
+
+        image.save(temp_file.name, format="JPEG")
         image_path = temp_file.name
 
     left, right = st.columns([1, 2])
@@ -48,18 +57,25 @@ if uploaded_file is not None:
             with st.spinner("Analyzing facial attributes and image quality..."):
                 analysis = analyze_face(image_path)
 
+            # Format labels for cleaner UI and JSON display
+            analysis["dominant_emotion"] = analysis["dominant_emotion"].capitalize()
+            analysis["dominant_gender"] = analysis["dominant_gender"].capitalize()
+
             st.success("Analysis complete.")
 
             st.markdown("## Trust Summary")
 
-            m1, m2, m3, m4, m5, m6 = st.columns([1, 1, 1, 1, 1, 2])
+            row1_col1, row1_col2, row1_col3 = st.columns(3)
 
-            m1.metric("Estimated Age", analysis["estimated_age"])
-            m2.metric("Age Group", analysis["age_group"])
-            m3.metric("Gender", analysis["dominant_gender"])
-            m4.metric("Emotion", analysis["dominant_emotion"])
-            m5.metric("Trust Score", f"{analysis['biometric_trust_score']}/100")
-            m6.metric("Risk Level", analysis["risk_level"])
+            row1_col1.metric("Estimated Age", analysis["estimated_age"])
+            row1_col2.metric("Age Group", analysis["age_group"])
+            row1_col3.metric("Gender", analysis["dominant_gender"])
+
+            row2_col1, row2_col2, row2_col3 = st.columns([1, 1, 1.5])
+
+            row2_col1.metric("Emotion", analysis["dominant_emotion"])
+            row2_col2.metric("Trust Score", f"{analysis['biometric_trust_score']}/100")
+            row2_col3.metric("Risk Level", analysis["risk_level"])
 
             st.markdown("## Image Quality")
             q1, q2, q3 = st.columns([2, 1, 2])
