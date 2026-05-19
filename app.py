@@ -52,11 +52,14 @@ if uploaded_file is not None:
 
             st.markdown("## Trust Summary")
 
-            m1, m2, m3, m4 = st.columns([1, 1, 1, 2])
+            m1, m2, m3, m4, m5, m6 = st.columns([1, 1, 1, 1, 1, 2])
+
             m1.metric("Estimated Age", analysis["estimated_age"])
             m2.metric("Age Group", analysis["age_group"])
-            m3.metric("Trust Score", f"{analysis['biometric_trust_score']}/100")
-            m4.metric("Risk Level", analysis["risk_level"])
+            m3.metric("Gender", analysis["dominant_gender"])
+            m4.metric("Emotion", analysis["dominant_emotion"])
+            m5.metric("Trust Score", f"{analysis['biometric_trust_score']}/100")
+            m6.metric("Risk Level", analysis["risk_level"])
 
             st.markdown("## Image Quality")
             q1, q2, q3 = st.columns([2, 1, 2])
