@@ -69,7 +69,7 @@ if uploaded_file is not None:
 
             row1_col1.metric("Estimated Age", analysis["estimated_age"])
             row1_col2.metric("Age Group", analysis["age_group"])
-            row1_col3.metric("Gender", analysis["dominant_gender"])
+            row1_col3.metric("Predicted Gender", analysis["dominant_gender"])
 
             row2_col1, row2_col2, row2_col3 = st.columns([1, 1, 1.5])
 
