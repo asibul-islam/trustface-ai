@@ -1,3 +1,13 @@
+---
+title: TrustFace AI
+emoji: 🧠
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # TrustFace AI
 
 TrustFace AI is a research-inspired prototype for trustworthy facial AI analysis. The system combines facial attribute estimation, image quality assessment, explainable AI, and robustness testing to explore reliability and trust in facial analytics systems.
